@@ -13,10 +13,10 @@ WITH cte_devices_lower AS (
 , cte_devices_rename AS (
 
     SELECT
-        {{ timestamptz_to_naive(adapter.quote("start_date")) }} AS device_start_datetime
-        , {{ timestamptz_to_naive(adapter.quote("end_date")) }} AS device_stop_datetime
-        , CAST(patient_id AS UUID) 
-        , CAST( encounter_id AS UUID)
+        {{ timestamptz_to_naive(adapter.quote("start")) }} AS device_start_datetime
+        , {{ timestamptz_to_naive(adapter.quote("stop")) }} AS device_stop_datetime
+        , patient::UUID AS patient_id 
+        , encounter::UUID AS encounter_id
         , code AS device_code
         , description AS device_description
         , udi

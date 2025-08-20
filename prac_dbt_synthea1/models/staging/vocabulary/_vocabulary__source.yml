@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: vocabulary
+    schema: vocabulary
+    tables:
+      - name: concept
+        identifier: "concept"
+      - name: concept_ancestor
+        identifier: "concept_ancestor"
+      - name: concept_class
+        identifier: "concept_class"
+      - name: concept_relationship
+        identifier: "concept_relationship"
+      - name: concept_synonym
+        identifier: "concept_synonym"
+      - name: domain
+        identifier: "domain"
+      - name: drug_strength
+        identifier: "drug_strength"
+      - name: relationship
+        identifier: "relationship"
+      - name: vocabulary
+        identifier: "vocabulary"
